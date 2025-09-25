@@ -53,6 +53,7 @@ project/		 # Parent directory (optional).
   └── venv/ 	 # Python virtual environment directory (optional, not committed).
 ```
 
+
 ## Setup (Windows)
 
 1. Download the project folder. Create a parent folder directly under the `C:/` drive (for easy access from WSL), and navigate into it using your terminal.
@@ -95,13 +96,17 @@ python -m src.setup
 pytest .
 ```
 
+## API Keys
+
+Create OpenAI and HuggingFace API keys, and copy them into `OPENAI_API_KEY` and `HF_HUB_TOKEN` in your `.env` file. Usage and cost can be monitored on each website individually.
+
 ---
 
 ## 3 - Modules
 
 #### Generating Documentation with Doxygen
 
-[Helpful Guide](https://www.woolseyworkshop.com/2020/06/25/documenting-python-programs-with-doxygen/)
+[External Guide](https://www.woolseyworkshop.com/2020/06/25/documenting-python-programs-with-doxygen/)
 
 ```bash
 sudo apt install doxygen
@@ -110,3 +115,7 @@ cd docs
 doxygen -g  # Next: Configure the generated doxyfile with settings from the Guide link
 doxygen     # Generate the HTML and LaTeX
 ```
+
+#### Web Application
+
+To extend the provided web app or to build your own, please reference our [Blazor UI Notes](docs/web_app_notes.md).
