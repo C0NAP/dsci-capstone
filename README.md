@@ -20,6 +20,7 @@ The goal of this project is to extract details from fiction books, and store fac
 - Relational database (PostgreSQL or MySQL preferred)
 - Document database (MongoDB)
 - Graph database (Neo4j)
+- Pandoc
 
 If you need help installing your databases, follow the [database guides](docs/database_instructions.md).
 
@@ -96,6 +97,11 @@ python -m src.setup
 pytest .
 ```
 
+9. Install required system libraries: Pandoc is used for EPUB file conversion.
+```bash
+sudo apt install pandoc
+```
+
 ## API Keys
 
 Create OpenAI and HuggingFace API keys, and copy them into `OPENAI_API_KEY` and `HF_HUB_TOKEN` in your `.env` file. Usage and cost can be monitored on each website individually.
@@ -104,14 +110,28 @@ Create OpenAI and HuggingFace API keys, and copy them into `OPENAI_API_KEY` and 
 
 ## 3 - Additional Information
 
-#### Code Documentation with Doxygen
-
-Pre-compiled code diagrams can be accessed from `docs/html/annotated.html`. We discuss our process in more detail [here](docs/code_style.md).
-
 #### Database Connections / Network Troubleshooting
 
 We have also compiled a [detailed guide](docs/database_instructions.md) addressing issues found when connecting the various components.
 
+#### Docker Hostname Resolution
+
+Optionally, Docker can be used to run our exact setup with test datasets and minimal configurations. [Docker Guide](docs/docker_setup.md)
+
 #### Web Application
 
 To extend the provided web app or to build your own, please reference our [Blazor UI Notes](docs/web_app_notes.md).
+
+#### Code Review Tools
+
+- Doxygen
+- Black
+- isort
+- mypy
+- Gource
+- git-story
+- GitClear
+
+#### Code Documentation with Doxygen
+
+Pre-compiled code diagrams can be accessed from `docs/html/annotated.html`. We discuss our process in more detail [here](docs/code_style.md).
